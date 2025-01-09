@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+    <main>
+        <!-- عرض معلومات المستخدم -->
+        <section id="userInfo">
+            <h2>Welcome, <span id="userName"></span></h2>
+            <p>Email: <span id="userEmail"></span></p>
+        </section>
+
+        <!-- إدارة المواعيد -->
+        <section id="appointments">
+            <h2>Your Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentsTable"></tbody>
+            </table>
+        </section>
+
+        <!-- إدارة الملفات الطبية -->
+        <section id="medicalRecords">
+            <h2>Medical Records</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" required>
+                <button type="submit">Upload File</button>
+            </form>
+            <ul id="recordsList"></ul>
+        </section>
+        <button id="logoutBtn">Logout</button>
+
+    </main>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
